@@ -1,0 +1,272 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth; /* Adiciona rolagem suave para links internos */
+}
+
+body {
+    background-color: #0f172a;
+    color: #f1f5f9;
+    line-height: 1.6; /* Melhora a legibilidade do texto */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #0e1a2b;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky; /* Fixa o cabeçalho no topo ao rolar */
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease; /* Transição suave na cor de fundo (opcional) */
+}
+
+header:hover {
+    background-color: #14243d; /* Leve alteração na cor ao passar o mouse (opcional) */
+}
+
+header img {
+    height: 100px; /* Ajustei um pouco a altura do logo */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma pequena animação ao passar o mouse no logo (opcional) */
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+nav a {
+    color: #fff;
+    margin-left: 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease; /* Transição suave na cor do link */
+}
+
+nav a:hover {
+    color: #04bdd6; /* Altera a cor do link ao passar o mouse */
+}
+
+/* Conteúdo principal */
+.container {
+    max-width: 1200px; /* Aumentei a largura máxima para telas maiores */
+    margin: 4rem auto 2rem; /* Reduzi a margem superior para dar mais destaque ao conteúdo */
+    padding: 0 2rem; /* Aumentei o padding lateral para melhor espaçamento em telas maiores */
+}
+
+h1 {
+    font-size: 3rem; /* Aumentei um pouco a fonte do título */
+    color: #04bdd6;
+    text-align: center;
+    margin-bottom: 1rem; /* Aumentei um pouco a margem inferior */
+    letter-spacing: -0.05rem; /* Pequeno ajuste no espaçamento entre letras para um visual mais moderno */
+}
+
+p.subtitulo {
+    text-align: center;
+    margin-bottom: 4rem; /* Aumentei a margem inferior */
+    color: #cbd5e1;
+    font-size: 1.2rem; /* Ajustei o tamanho da fonte */
+    line-height: 1.8; /* Melhora a legibilidade do subtítulo */
+    font-weight: 300; /* Deixei a fonte um pouco mais leve */
+}
+
+/* Seção de serviços */
+#servicos h2 {
+    margin-bottom: 2rem;
+    color: #04bdd6;
+    text-align: center; /* Centralizei o título da seção */
+    font-size: 2rem; /* Ajustei o tamanho da fonte do título da seção */
+}
+
+.servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout responsivo com largura mínima de 300px */
+    gap: 2rem; /* Aumentei o espaçamento entre os cards */
+}
+
+.card {
+    background-color: #1e293b;
+    padding: 2rem; /* Aumentei o padding interno dos cards */
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adicionei transição para a sombra */
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem; /* Aumentei o espaçamento entre o ícone e o texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra aos cards */
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Eleva um pouco o card ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+}
+
+.card i {
+    font-size: 2rem; /* Aumentei o tamanho dos ícones */
+    color: #04bdd6;
+    margin-top: 4px;
+    flex-shrink: 0; /* Evita que o ícone encolha */
+}
+
+.card h3 {
+    margin-bottom: 0.75rem; /* Aumentei um pouco a margem inferior do título do card */
+    font-size: 1.3rem; /* Ajustei o tamanho da fonte do título do card */
+    color: #f9fafa; /* Pequena alteração na cor do título do card */
+}
+
+.card p {
+    color: #cbd5e1;
+    font-size: 1rem; /* Ajustei o tamanho da fonte do texto do card */
+    line-height: 1.7; /* Melhora a legibilidade do texto do card */
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px; /* Ajustei o padding vertical e horizontal */
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    background-color: #1e293b;
+    margin-top: 4rem;
+}
+
+footer > p:first-child { /* Estiliza o parágrafo do copyright */
+    margin-bottom: 1rem;
+}
+
+footer div {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente (opcional, mas útil para ícones) */
+    gap: 20px; /* Espaçamento entre os itens */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
+}
+
+footer div p {
+    margin: 0; /* Remove margens padrão dos parágrafos dentro da div */
+}
+
+footer div a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+footer div a:hover {
+    color: #f9fafa;
+    text-decoration: underline;
+}
+
+footer div i {
+    margin-right: 0.5rem;
+    font-size: 1rem; /* Ajuste o tamanho dos ícones conforme necessário */
+    vertical-align: middle; /* Alinha verticalmente os ícones com o texto */
+}
+
+/* Media query para telas menores */
+@media (max-width: 600px) {
+    footer div {
+        flex-direction: column; /* Empilha os itens em telas menores */
+        align-items: center; /* Centraliza os itens empilhados */
+        gap: 10px; /* Reduz o espaçamento entre os itens empilhados */
+    }
+
+    footer > p:first-child {
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+
+/* Media query para telas menores (abaixo de 768px) */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 2rem; /* Reduzi a margem superior em telas menores */
+        padding: 0 1rem; /* Reduzi o padding lateral em telas menores */
+    }
+
+    h1 {
+        font-size: 2rem; /* Reduzi o tamanho da fonte do título em telas menores */
+        margin-bottom: 0.5rem;
+    }
+
+    p.subtitulo {
+        font-size: 1.1rem; /* Reduzi o tamanho da fonte do subtítulo em telas menores */
+        margin-bottom: 2rem;
+    }
+
+    #servicos h2 {
+        font-size: 1.75rem; /* Reduzi o tamanho da fonte do título da seção em telas menores */
+    }
+
+    .servicos {
+        grid-template-columns: 1fr; /* Força uma coluna em telas menores */
+        gap: 1rem; /* Reduzi o espaçamento entre os cards em telas menores */
+    }
+
+    .card {
+        padding: 1.25rem; /* Reduzi o padding dos cards em telas menores */
+        gap: 1rem;
+    }
+
+    .card i {
+        font-size: 1.5rem; /* Reduzi o tamanho dos ícones em telas menores */
+    }
+
+    .card h3 {
+        font-size: 1.1rem; /* Reduzi o tamanho da fonte do título do card em telas menores */
+    }
+
+    nav {
+        /* Podemos adicionar estilos para um menu responsivo aqui, como um ícone que abre um menu lateral ou dropdown */
+        /* Por enquanto, vamos manter os links em linha, mas em telas muito pequenas, isso pode precisar de ajuste */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* Alinha os links à direita */
+        background-color: #0e1a2b;
+        position: absolute;
+        top: 100%; /* Posiciona abaixo do cabeçalho */
+        right: 0;
+        width: 150px;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 0 0 8px 8px;
+        display: none; /* Esconde o menu por padrão em telas menores */
+    }
+
+    header:hover nav, /* Mostra o menu ao passar o mouse no cabeçalho (para teste) */
+    header.menu-aberto nav { /* Classe 'menu-aberto' será adicionada com JavaScript para mostrar o menu */
+        display: flex;
+    }
+
+    nav a {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+        display: block; /* Faz os links ocuparem a largura total do menu */
+        text-align: right; /* Alinha o texto dos links à direita */
+    }
+
+    nav a:last-child {
+        margin-bottom: 0;
+    }
+
+    header img {
+        height: 70px; /* Reduzi um pouco a altura do logo em telas menores */
+    }
+}
+
+/* Media query para telas ainda menores (abaixo de 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.75rem; /* Reduzi ainda mais o título */
+    }
+
+    p.subtitulo {
+        font-size: 1rem; /* Reduzi ainda mais o subtítulo */
+    }
+}
